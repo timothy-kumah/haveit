@@ -12,7 +12,9 @@ const Navbar = () => {
         {title:"Studio",href:"/studio"}
     ]
   return (
-    <div className=' text-ellipsis shadow-md h-20'>
+    <div className='w-full bg-white/70 text-ellipsis 
+    backdrop-blur-2xl shadow-md h-20 sticky top-0 ba 
+    transition-colors z-50'>
       <div className='flex justify-between mx-auto 
       max-w-screen-xl items-center px-4 lg:px-0 h-full'>
           <Logo title="Have it" className="text-blue-400"/>
