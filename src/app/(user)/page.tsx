@@ -1,6 +1,5 @@
-import Image from "next/image";
+
 import Hero from "../components/Hero";
-import Footer from "../components/footer";
 import { groq } from "next-sanity";
 import { client } from "@/lib/createClient";
 import BlogContent from "../components/BlogContent";
