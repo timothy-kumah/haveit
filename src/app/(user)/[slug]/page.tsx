@@ -7,12 +7,16 @@ import Image from "next/image"
 import Link from "next/link";
 import { BsFacebook, BsLinkedin, BsYoutube } from "react-icons/bs";
 import { PortableText } from "@portabletext/react";
+import { RichText } from "@/app/components/RichText";
+
 
 interface Props{
   params:{
     slug:string;
   }
 }
+
+export const revalidate = 30;
 
 export const generateStaticParams = async () =>{
   const query = groq`*[_type == 'post']{
@@ -65,7 +69,7 @@ const SlugPage = async ({params:{slug}}:Props) => {
         </div>
       </div>
       <div>
-        <PortableText value={post?.body}/>
+        <PortableText  value={post?.body} components={RichText}/>
       </div>
       </Container>
   )
